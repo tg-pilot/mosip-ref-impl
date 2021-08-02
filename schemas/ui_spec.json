@@ -458,7 +458,7 @@
     "requiredOn": [
       {
         "engine": "MVEL",
-        "expr": "identity.age < 18"
+        "expr": "( identity.isNew && identity.isChild ) || ( identity.isUpdate && identity.isChild )"
       }
     ],
     "subType": "parentOrGuardianFirstName",
@@ -506,7 +506,7 @@
     "alignmentGroup": "Informations du Parent ou Tuteur",
     "visible": {
       "engine": "MVEL",
-      "expr": "identity.age < 18"
+      "expr": "( identity.isNew && identity.isChild ) || ( identity.isUpdate && identity.isChild )"
     },
     "changeAction": null,
     "required": false
@@ -530,7 +530,7 @@
     "requiredOn": [
       {
         "engine": "MVEL",
-        "expr": "( identity.age < 18 && (identity.parentOrGuardianUIN == nil || identity.parentOrGuardianUIN == empty) )"
+        "expr": "( identity.isChild && (identity.parentOrGuardianUIN == nil || identity.parentOrGuardianUIN == empty) )"
       }
     ],
     "subType": "RID",
@@ -563,7 +563,7 @@
     "requiredOn": [
       {
         "engine": "MVEL",
-        "expr": "( identity.age < 18 && (identity.parentOrGuardianRID == nil || identity.parentOrGuardianRID == empty) )"
+        "expr": "( identity.isChild && (identity.parentOrGuardianRID == nil || identity.parentOrGuardianRID == empty) )"
       }
     ],
     "subType": "UIN",
@@ -846,7 +846,7 @@
     "requiredOn": [
       {
         "engine": "MVEL",
-        "expr": "(identity.age < 18 && identity.isNew) || (identity.isUpdate && identity.age < 18)"
+        "expr": "(identity.isChild && identity.isNew) || (identity.isUpdate && identity.updatableFieldGroups contains 'GuardianDetails')"
       }
     ],
     "subType": "introducer",
