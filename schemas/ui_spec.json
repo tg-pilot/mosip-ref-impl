@@ -251,7 +251,7 @@
     "alignmentGroup": "Informations Personnelles",
     "visible": null,
     "changeAction": null,
-    "required": false
+    "required": true
   },
   {
     "id": "region",
