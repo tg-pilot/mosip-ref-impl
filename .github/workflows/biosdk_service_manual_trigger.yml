@@ -1,4 +1,4 @@
-name: Maven Package upon a push
+name: Biosdk service manual push trigger
 
 on: workflow_dispatch
   
