@@ -8,7 +8,7 @@ copy ./configure_biosdk.sh /configure_biosdk.sh
 
 RUN chmod 777 /biosdk-services.jar
 
-RUN chmod +x /configure_sdk.sh
+RUN chmod +x /configure_biosdk.sh
 RUN apt-get update
 
 EXPOSE 9099
