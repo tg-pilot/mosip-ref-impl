@@ -1,11 +1,2 @@
 ﻿zone_code,usr_id,lang_code,is_active,cr_by,cr_dtimes,eff_dtimes
-CK,110001,fra,True,superadmin,now(),now()
-CK,110002,fra,True,superadmin,now(),now()
-CK,110003,fra,True,superadmin,now(),now()
-CK,110004,fra,True,superadmin,now(),now()
-CK,110005,fra,True,superadmin,now(),now()
-CK,lisbon,fra,True,superadmin,now(),now()
 CK,madrid,fra,True,superadmin,now(),now()
-CK,berlin,fra,True,superadmin,now(),now()
-CK,trialblazerseee,fra,True,superadmin,now(),now()
-CK,ganeshtaru,fra,True,110118,now(),now()
