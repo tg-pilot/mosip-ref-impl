@@ -394,7 +394,7 @@
     "validators": [
       {
         "type": "regex",
-        "validator": "^(?=.{3,50}$).*",
+        "validator": "^(?=.{0,50}$).*",
         "arguments": []
       }
     ],
@@ -412,7 +412,7 @@
     "id": "hin",
     "description": "hin",
     "label": {
-      "primary": "Household Identification Number"
+      "primary": "Numéro d'identification du ménage"
     },
     "type": "string",
     "minimum": 0,
@@ -425,7 +425,7 @@
     "validators": [
       {
         "type": "regex",
-        "validator": "^(?=.{3,50}$).*",
+        "validator": "^(?=.{0,50}$).*",
         "arguments": []
       }
     ],
@@ -433,8 +433,8 @@
     "requiredOn": [],
     "subType": "hin",
     "contactType": null,
-    "group": "Household Identification Number",
-    "alignmentGroup": "Household Identification Number",
+    "group": "Numéro d'identification du ménage",
+    "alignmentGroup": "Numéro d'identification du ménage",
     "visible": null,
     "changeAction": null,
     "required": false
