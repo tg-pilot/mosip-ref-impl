@@ -173,7 +173,13 @@
           "fieldType": "default",
           "$ref": "#/definitions/simpleType"
         },
-        "locality": {
+        "placeSaid": {
+          "fieldCategory": "pvt",
+          "format": "none",
+          "fieldType": "default",
+          "type": "string"
+        },
+        "hin": {
           "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
@@ -196,12 +202,6 @@
           "format": "none",
           "fieldType": "default",
           "type": "integer"
-        },
-        "hin": {
-          "fieldCategory": "pvt",
-          "format": "none",
-          "fieldType": "default",
-          "type": "string"
         },
         "individualBiometrics": {
           "bioAttributes": [
