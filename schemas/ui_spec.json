@@ -97,7 +97,7 @@
     "validators": [
       {
         "type": "regex",
-        "validator": "^(?=.{3,50}$).*",
+        "validator": "^(?=.{0,50}$).*",
         "arguments": []
       }
     ],
@@ -383,7 +383,7 @@
     "label": {
       "primary": "Lieu-dit"
     },
-    "type": "string",
+    "type": "simpleType",
     "minimum": 0,
     "maximum": 0,
     "controlType": "textbox",
@@ -400,7 +400,7 @@
     ],
     "bioAttributes": null,
     "requiredOn": [],
-    "subType": "locality",
+    "subType": "LOCALITY",
     "contactType": "Postal",
     "group": "Adresse",
     "alignmentGroup": "Adresse",
@@ -420,7 +420,7 @@
     "controlType": "textbox",
     "fieldType": "default",
     "format": "none",
-    "fieldCategory": "evidence",
+    "fieldCategory": "pvt",
     "inputRequired": true,
     "validators": [
       {

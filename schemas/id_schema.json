@@ -108,7 +108,7 @@
         "lastName": {
           "validators": [
             {
-              "validator": "^(?=.{3,50}$).*",
+              "validator": "^(?=.{0,50}$).*",
               "arguments": [],
               "type": "regex"
             }
@@ -198,7 +198,7 @@
           "type": "integer"
         },
         "hin": {
-          "fieldCategory": "evidence",
+          "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
           "type": "string"
