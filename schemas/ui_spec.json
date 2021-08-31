@@ -66,7 +66,7 @@
     "validators": [
       {
         "type": "regex",
-        "validator": "^(?=.{0,120}$).*",
+        "validator": "^(?=.{3,50}$).*",
         "arguments": []
       }
     ],
@@ -97,7 +97,7 @@
     "validators": [
       {
         "type": "regex",
-        "validator": "^(?=.{0,120}$).*",
+        "validator": "^(?=.{3,50}$).*",
         "arguments": []
       }
     ],
@@ -153,7 +153,7 @@
     "validators": [
       {
         "type": "regex",
-        "validator": "^(1869|18[7-9]\\d|19\\d\\d|20\\d\\d)/([0][1-9]|1[0-2])/([0][1-9]|[1-2]\\d|3[0-1])$",
+        "validator": "^([0][1-9]|[1-2][0-9]|3[0-1])-([0][1-9]|1[0-2])-(1869|18[7-9][0-9]|19[0-9][0-9]|20[0-9][0-9])$",
         "arguments": []
       }
     ],
@@ -285,7 +285,7 @@
     "required": true
   },
   {
-    "id": "prefecture",
+    "id": "province",
     "description": "prefecture",
     "label": {
       "primary": "Préfecture"
@@ -316,7 +316,7 @@
     "required": true
   },
   {
-    "id": "subPrefectureOrCommune",
+    "id": "town",
     "description": "subPrefecture Or Commune",
     "label": {
       "primary": "Sous-Préfecture"
@@ -347,10 +347,10 @@
     "required": true
   },
   {
-    "id": "district",
-    "description": "District",
+    "id": "canton",
+    "description": "canton",
     "label": {
-      "primary": "District"
+      "primary": "Canton"
     },
     "type": "simpleType",
     "minimum": 0,
@@ -369,7 +369,7 @@
     ],
     "bioAttributes": null,
     "requiredOn": [],
-    "subType": "DISTRICT",
+    "subType": "CANTON",
     "contactType": "Postal",
     "group": "Adresse",
     "alignmentGroup": "Adresse",
@@ -378,35 +378,10 @@
     "required": true
   },
   {
-    "id": "sector",
-    "description": "Sector",
+    "id": "locality",
+    "description": "locality",
     "label": {
-      "primary": "Secteur"
-    },
-    "type": "simpleType",
-    "minimum": 0,
-    "maximum": 0,
-    "controlType": "dropdown",
-    "fieldType": "default",
-    "format": "none",
-    "fieldCategory": "pvt",
-    "inputRequired": true,
-    "validators": [],
-    "bioAttributes": null,
-    "requiredOn": [],
-    "subType": "SECTEUR",
-    "contactType": null,
-    "group": "Adresse",
-    "alignmentGroup": "Adresse",
-    "visible": null,
-    "changeAction": null,
-    "required": true
-  },
-  {
-    "id": "additionalAddressDetails",
-    "description": "additionalAddressDetails",
-    "label": {
-      "primary": "Complément d'Adresse"
+      "primary": "Lieu-dit"
     },
     "type": "string",
     "minimum": 0,
@@ -419,13 +394,13 @@
     "validators": [
       {
         "type": "regex",
-        "validator": "^(?=.{0,50}$).*",
+        "validator": "^(?=.{3,50}$).*",
         "arguments": []
       }
     ],
     "bioAttributes": null,
     "requiredOn": [],
-    "subType": "additionalAddressDetails",
+    "subType": "locality",
     "contactType": "Postal",
     "group": "Adresse",
     "alignmentGroup": "Adresse",
@@ -434,12 +409,12 @@
     "required": false
   },
   {
-    "id": "parentOrGuardianFirstName",
-    "description": "parentOrGuardianFirstName",
+    "id": "hin",
+    "description": "hin",
     "label": {
-      "primary": "Prénom(s)"
+      "primary": "Household Identification Number"
     },
-    "type": "simpleType",
+    "type": "string",
     "minimum": 0,
     "maximum": 0,
     "controlType": "textbox",
@@ -450,64 +425,17 @@
     "validators": [
       {
         "type": "regex",
-        "validator": "^(?=.{0,120}$).*",
+        "validator": "^(?=.{3,50}$).*",
         "arguments": []
       }
     ],
     "bioAttributes": null,
-    "requiredOn": [
-      {
-        "engine": "MVEL",
-        "expr": "( identity.isNew && identity.isChild ) || ( identity.isUpdate && identity.isChild )"
-      }
-    ],
-    "subType": "parentOrGuardianFirstName",
+    "requiredOn": [],
+    "subType": "hin",
     "contactType": null,
-    "group": "Info. du parent/tuteur",
-    "alignmentGroup": "Informations du Parent ou Tuteur",
-    "visible": {
-      "engine": "MVEL",
-      "expr": "identity.age < 18"
-    },
-    "changeAction": null,
-    "required": false
-  },
-  {
-    "id": "parentOrGuardianLastName",
-    "description": "parentOrGuardianLastName",
-    "label": {
-      "primary": "Nom de Famille"
-    },
-    "type": "simpleType",
-    "minimum": 0,
-    "maximum": 0,
-    "controlType": "textbox",
-    "fieldType": "default",
-    "format": "none",
-    "fieldCategory": "evidence",
-    "inputRequired": true,
-    "validators": [
-      {
-        "type": "regex",
-        "validator": "^(?=.{0,120}$).*",
-        "arguments": []
-      }
-    ],
-    "bioAttributes": null,
-    "requiredOn": [
-      {
-        "engine": "MVEL",
-        "expr": "identity.age < 18"
-      }
-    ],
-    "subType": "parentOrGuardianLastName",
-    "contactType": null,
-    "group": "Info. du parent/tuteur",
-    "alignmentGroup": "Informations du Parent ou Tuteur",
-    "visible": {
-      "engine": "MVEL",
-      "expr": "( identity.isNew && identity.isChild ) || ( identity.isUpdate && identity.isChild )"
-    },
+    "group": "Household Identification Number",
+    "alignmentGroup": "Household Identification Number",
+    "visible": null,
     "changeAction": null,
     "required": false
   },
@@ -619,7 +547,7 @@
     "subType": "POA",
     "contactType": null,
     "group": "Documents",
-    "required": false
+    "required": true
   },
   {
     "id": "proofOfIdentity",
@@ -641,7 +569,7 @@
     "subType": "POI",
     "contactType": null,
     "group": "Documents",
-    "required": false
+    "required": true
   },
   {
     "id": "proofOfRelationship",
@@ -663,7 +591,7 @@
     "subType": "POR",
     "contactType": null,
     "group": "Documents",
-    "required": false
+    "required": true
   },
   {
     "id": "proofOfDateOfBirth",
@@ -685,7 +613,7 @@
     "subType": "POB",
     "contactType": null,
     "group": "Documents",
-    "required": false
+    "required": true
   },
   {
     "id": "proofOfException",
