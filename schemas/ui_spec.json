@@ -285,7 +285,7 @@
     "required": true
   },
   {
-    "id": "province",
+    "id": "prefecture",
     "description": "prefecture",
     "label": {
       "primary": "Préfecture"
@@ -317,9 +317,9 @@
   },
   {
     "id": "town",
-    "description": "subPrefecture Or Commune",
+    "description": "Commune",
     "label": {
-      "primary": "Sous-Préfecture"
+      "primary": "Commune"
     },
     "type": "simpleType",
     "minimum": 0,
