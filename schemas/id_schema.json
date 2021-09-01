@@ -155,7 +155,7 @@
           "fieldType": "default",
           "$ref": "#/definitions/simpleType"
         },
-        "province": {
+        "prefecture": {
           "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
