@@ -70,10 +70,10 @@
         "gender",
         "residenceStatus",
         "region",
-        "province",
+        "prefecture",
         "town",
         "canton",
-        "locality",
+        "placeSaid",
         "individualBiometrics"
       ],
       "properties": {
