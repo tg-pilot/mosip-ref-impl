@@ -177,7 +177,7 @@
           "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
-          "type": "#/definitions/simpleType"
+          "$ref": "#/definitions/simpleType"
         },
         "hin": {
           "fieldCategory": "pvt",
