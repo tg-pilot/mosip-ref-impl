@@ -183,7 +183,7 @@
     "validators": [
       {
         "type": "regex",
-        "validator": "^[+]*([0-9]{1})([0-9]{9})$",
+        "validator": "^[+]*([9][0-9]{7})$",
         "arguments": []
       }
     ],
@@ -528,32 +528,10 @@
     "required": true
   },
   {
-    "id": "proofOfAddress",
-    "description": "proofOfAddress",
-    "label": {
-      "primary": "Justificatif de domicile"
-    },
-    "type": "documentType",
-    "minimum": 0,
-    "maximum": 0,
-    "controlType": "fileupload",
-    "fieldType": "default",
-    "format": "none",
-    "fieldCategory": "evidence",
-    "inputRequired": true,
-    "validators": [],
-    "bioAttributes": null,
-    "requiredOn": [],
-    "subType": "POA",
-    "contactType": null,
-    "group": "Documents",
-    "required": true
-  },
-  {
     "id": "proofOfIdentity",
     "description": "proofOfIdentity",
     "label": {
-      "primary": "Justificatif d'identité"
+      "primary": "Preuve d'identité"
     },
     "type": "documentType",
     "minimum": 0,
@@ -575,7 +553,7 @@
     "id": "proofOfRelationship",
     "description": "proofOfRelationship",
     "label": {
-      "primary": "Justificatif de lien de parenté"
+      "primary": "Preuve de relation"
     },
     "type": "documentType",
     "minimum": 0,
@@ -591,13 +569,35 @@
     "subType": "POR",
     "contactType": null,
     "group": "Documents",
-    "required": true
+    "required": false
+  },
+  {
+    "id": "proofOfAddress",
+    "description": "proofOfAddress",
+    "label": {
+      "primary": "Preuve de domicile"
+    },
+    "type": "documentType",
+    "minimum": 0,
+    "maximum": 0,
+    "controlType": "fileupload",
+    "fieldType": "default",
+    "format": "none",
+    "fieldCategory": "evidence",
+    "inputRequired": true,
+    "validators": [],
+    "bioAttributes": null,
+    "requiredOn": [],
+    "subType": "POA",
+    "contactType": null,
+    "group": "Documents",
+    "required": false
   },
   {
     "id": "proofOfDateOfBirth",
     "description": "proofOfDateOfBirth",
     "label": {
-      "primary": "Justificatif de date de naissance"
+      "primary": "Preuve de naissance"
     },
     "type": "documentType",
     "minimum": 0,
@@ -613,7 +613,7 @@
     "subType": "POB",
     "contactType": null,
     "group": "Documents",
-    "required": true
+    "required": false
   },
   {
     "id": "proofOfException",
