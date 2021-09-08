@@ -414,7 +414,7 @@
     "label": {
       "primary": "Numéro d'identification du ménage"
     },
-    "type": "string",
+    "type": "simpleType",
     "minimum": 0,
     "maximum": 0,
     "controlType": "textbox",

@@ -183,7 +183,7 @@
           "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
-          "type": "string"
+          "type": "#/definitions/simpleType"
         },
         "residenceStatus": {
           "fieldCategory": "kyc",
