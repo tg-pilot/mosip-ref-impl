@@ -1140,13 +1140,13 @@ export class DemographicComponent
   setDateOfBirth() {
     this.date = this.user.request.demographicDetails.identity[
       "dateOfBirth"
-    ].split("/")[2];
+    ].split("-")[0];
     this.month = this.user.request.demographicDetails.identity[
       "dateOfBirth"
-    ].split("/")[1];
+    ].split("-")[1];
     this.year = this.user.request.demographicDetails.identity[
       "dateOfBirth"
-    ].split("/")[0];
+    ].split("-")[2];
     this.currentAge = this.calculateAge(
       this.user.request.demographicDetails.identity["dateOfBirth"]
     ).toString();
@@ -1188,11 +1188,11 @@ export class DemographicComponent
         this.month = this.defaultMonth;
         this.year = calulatedYear.toString();
         this.userForm.controls["dateOfBirth"].setValue(
-          calulatedYear + "/" + this.defaultMonth + "/" + this.defaultDay
+          this.defaultDay + "-" + this.defaultMonth + "-" + calulatedYear
         );
         if (this.primaryLang !== this.secondaryLang) {
           this.transUserForm.controls["dateOfBirth"].setValue(
-            calulatedYear + "/" + this.defaultMonth + "/" + this.defaultDay
+            this.defaultDay + "-" + this.defaultMonth + "-" + calulatedYear
           );
         }
         // this.userForm.controls["dateOfBirth"].setErrors(null);
@@ -1226,9 +1226,9 @@ export class DemographicComponent
     this.month = this.mm.nativeElement.value;
     this.year = this.yyyy.nativeElement.value;
     if (this.date !== "" && this.month !== "" && this.year !== "") {
-      const newDate = this.year + "/" + this.month + "/" + this.date;
+      const newDate = this.date + "-" + this.month + "-" + this.year;
       console.log(newDate);
-      if (moment(newDate, "YYYY/MM/DD", true).isValid()) {
+      if (moment(newDate, "DD-MM-YYYY", true).isValid()) {
         this.currentAge = this.calculateAge(newDate).toString();
         this.age.nativeElement.value = this.currentAge;
         this.userForm.controls["dateOfBirth"].setValue(newDate);
@@ -1374,7 +1374,7 @@ export class DemographicComponent
       dateOfMonth = datee.toString();
     }
 
-    const formattedDate = `${year}/${monthOfYear}/${dateOfMonth}`;
+    const formattedDate = `${dateOfMonth}-${monthOfYear}-${year}`;
     this.userForm.controls["dateOfBirth"].setValue(formattedDate);
     if (this.primaryLang !== this.secondaryLang) {
       this.transUserForm.controls["dateOfBirth"].setValue(formattedDate);
