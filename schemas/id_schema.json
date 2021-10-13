@@ -274,31 +274,31 @@
           "$ref": "#/definitions/biometricsType"
         },
         "proofOfConsent": {
-          "fieldCategory": "evidence",
+          "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
           "$ref": "#/definitions/documentType"
         },
         "proofOfIdentity": {
-          "fieldCategory": "evidence",
+          "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
           "$ref": "#/definitions/documentType"
         },
         "proofOfRelationship": {
-          "fieldCategory": "evidence",
+          "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
           "$ref": "#/definitions/documentType"
         },
         "proofOfAddress": {
-          "fieldCategory": "evidence",
+          "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
           "$ref": "#/definitions/documentType"
         },
         "proofOfDateOfBirth": {
-          "fieldCategory": "evidence",
+          "fieldCategory": "pvt",
           "format": "none",
           "fieldType": "default",
           "$ref": "#/definitions/documentType"
