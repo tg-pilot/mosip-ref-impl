@@ -5,6 +5,7 @@ package io.mosip.kernel.smsserviceprovider.fast2sms.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.HttpServerErrorException;
@@ -72,7 +73,8 @@ public class SMSServiceProviderImpl implements SMSServiceProvider {
 				.queryParam(SmsPropertyConstant.COUNTRY_CODE.getProperty(), countryCode)
 				.queryParam(SmsPropertyConstant.LANGUAGE.getProperty(),language);
 		try {
-			restTemplate.getForEntity(sms.toUriString(), String.class);
+			ResponseEntity response = restTemplate.getForEntity(sms.toUriString(), String.class);
+			System.out.println(response);
 		} catch (HttpClientErrorException | HttpServerErrorException e) {
 			throw new RuntimeException(e.getResponseBodyAsString());
 		}
