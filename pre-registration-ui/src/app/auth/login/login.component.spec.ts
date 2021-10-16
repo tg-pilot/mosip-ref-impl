@@ -22,13 +22,13 @@ describe('LoginComponent', () => {
     'mosip.kernel.otp.expiry-time': '120',
     'mosip.kernel.otp.validation-attempt-threshold': '3',
     'mosip.kernel.pin.length': '6',
-    'mosip.kernel.sms.number.length': '10',
+    'mosip.kernel.sms.number.length': '8',
     'mosip.login.mode': 'email,mobile',
     'mosip.primary-language': 'ara',
     'mosip.regex.referenceIdentityNumber': '^([0-9]{10,30})$',
     'mosip.regex.DOB': '^d{4}/([0]d|1[0-2])/([0-2]d|3[01])$',
     'mosip.regex.email': '^[w-+]+(.[w]+)*@[w-]+(.[w]+)*(.[a-z]{2,})$',
-    'mosip.regex.phone': '^([6-9]{1})([0-9]{9})$',
+    'mosip.regex.phone': '^[+]*([9][0-9]{7})$',
     'mosip.regex.postalCode': '^[(?i)A-Z0-9]{6}$',
     'mosip.regex.textField': '',
     'mosip.secondary-language': 'fra',
@@ -117,7 +117,7 @@ describe('LoginComponent', () => {
   });
 
   it('should validate login Id', () => {
-    component.inputContactDetails = '9748107386';
+    component.inputContactDetails = '97481073';
     component.loginIdValidator();
     fixture.detectChanges();
     expect(component.errorMessage).toBe(undefined);
