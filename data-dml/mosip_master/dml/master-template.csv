@@ -44,7 +44,7 @@ Merci de vous être inscrit sur la plateforme d'identité numérique. Votre iden
 OTP pour le nom d'utilisateur $username est $otp et est valide pour $validTime minutes (Généré le $date à $heure hrs).",10002,Client dinscription,OTP-email-content-template,fra,TRUE,superadmin,now()
 1119,Modèle pour le sujet de-mail de génération dOTP,Modèle pour le sujet de-mail de génération dOTP,txt,velocity,Mot de passe unique de la plateforme d'identification numérique,10002,Client dinscription,OTP-email-subject-template,fra,TRUE,superadmin,now()
 1120,Modèle pour SMS OTP,Modèle pour SMS OTP,txt,velocity,"Cher $name,
-OTP pour le nom d'utilisateur $username est $otp et est valide pour $validTime minutes (Généré le $date à $heure hrs).",10002,Client dinscription,OTP-sms-template,fra,TRUE,superadmin,now()
+OTP pour le nom d'utilisateur $username est $otp et est valide pour $validTime minutes (Généré le $date à $time hrs).",10002,Client dinscription,OTP-sms-template,fra,TRUE,superadmin,now()
 1121,Modèle pour lenregistrement de la mise à jour,Modèle pour lenregistrement de la mise à jour,txt,velocity,"Cher $name,
 Merci de mettre à jour vos coordonnées avec la plateforme d’identité numérique. Votre identifiant d'enregistrement est $RegistrationID. Si des corrections doivent être apportées à vos données, veuillez contacter le centre d’inscription dans les 4 prochains jours.",10002,Client dinscription,Update-email-content-template,fra,TRUE,superadmin,now()
 1122,Modèle denregistrement de mise à jour Objet de le-mail,Modèle denregistrement de mise à jour Objet de le-mail,txt,velocity,Confirmation de la mise à jour de l'inscription,10002,Client dinscription,Update-email-subject-template,fra,TRUE,superadmin,now()
