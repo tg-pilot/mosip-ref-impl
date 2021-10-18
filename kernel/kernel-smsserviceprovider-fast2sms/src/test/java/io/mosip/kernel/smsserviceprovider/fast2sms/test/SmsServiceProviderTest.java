@@ -1,4 +1,4 @@
-package io.mosip.kernel.smsserviceprovider.msg91.test;
+package io.mosip.kernel.smsserviceprovider.fast2sms.test;
 
 import static org.mockito.Mockito.when;
 
@@ -18,10 +18,10 @@ import org.springframework.web.util.UriComponentsBuilder;
 
 import io.mosip.kernel.core.notification.exception.InvalidNumberException;
 import io.mosip.kernel.core.notification.model.SMSResponseDto;
-import io.mosip.kernel.smsserviceprovider.msg91.SMSServiceProviderBootApplication;
-import io.mosip.kernel.smsserviceprovider.msg91.constant.SmsPropertyConstant;
-import io.mosip.kernel.smsserviceprovider.msg91.dto.SmsServerResponseDto;
-import io.mosip.kernel.smsserviceprovider.msg91.impl.SMSServiceProviderImpl;
+import io.mosip.kernel.smsserviceprovider.fast2sms.SMSServiceProviderBootApplication;
+import io.mosip.kernel.smsserviceprovider.fast2sms.constant.SmsPropertyConstant;
+import io.mosip.kernel.smsserviceprovider.fast2sms.dto.SmsServerResponseDto;
+import io.mosip.kernel.smsserviceprovider.fast2sms.impl.SMSServiceProviderImpl;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = { SMSServiceProviderBootApplication.class })
@@ -59,7 +59,7 @@ public class SmsServiceProviderTest {
 				.queryParam(SmsPropertyConstant.SMS_MESSAGE.getProperty(), "your otp is 4646")
 				.queryParam(SmsPropertyConstant.ROUTE.getProperty(), route)
 				.queryParam(SmsPropertyConstant.SENDER_ID.getProperty(), senderId)
-				.queryParam(SmsPropertyConstant.RECIPIENT_NUMBER.getProperty(), "8987876473")
+				.queryParam(SmsPropertyConstant.RECIPIENT_NUMBER.getProperty(), "8971662474")
 				.queryParam(SmsPropertyConstant.COUNTRY_CODE.getProperty(), countryCode);
 
 		SmsServerResponseDto serverResponse = new SmsServerResponseDto();
@@ -96,7 +96,7 @@ public class SmsServiceProviderTest {
 
 	@Test
 	public void validGateWayTest() {
-		service.sendSms("1234567890", "hello your otp is 45373");
+		service.sendSms("8208356358", "hi All, Thamaraikannan");
 	}
 
 }
